@@ -11,11 +11,11 @@ from ultralytics import YOLO
 
 # 1. Page Configuration
 st.set_page_config(
-    page_title="CHIP-A-EYE Workstation",
+    page_title="Board Alchemist Workstation",
     layout="wide",
 )
 
-st.title("CHIP-A-EYE: Edge-AI Optical Inspection & Harvesting Workstation")
+st.title("Board Alchemist: Edge-AI Optical Inspection & Harvesting Workstation")
 st.write(
     "Automated PCB component detection, hazard flagging, material valuation,"
     " and digital certification."
@@ -114,7 +114,7 @@ def generate_pdf_bytes(manifest_data, total_value, hazard_count, reusable_count)
   # Title & Header
   c.setFont("Helvetica-Bold", 16)
   c.drawString(
-      40, height - 50, "CHIP-A-EYE: DIGITAL E-WASTE COMPLIANCE CERTIFICATE"
+      40, height - 50, "Board Alchemist: DIGITAL E-WASTE COMPLIANCE CERTIFICATE"
   )
   c.setFont("Helvetica", 10)
   c.drawString(
@@ -310,7 +310,7 @@ def process_and_display(image_pil):
   st.download_button(
       label="📥 Download Digital Compliance & Valuation Certificate (PDF)",
       data=pdf_bytes,
-      file_name=f"CHIP_A_EYE_Certificate_{int(time.time())}.pdf",
+      file_name=f"Board_Alchemist_Certificate_{int(time.time())}.pdf",
       mime="application/pdf",
   )
 
